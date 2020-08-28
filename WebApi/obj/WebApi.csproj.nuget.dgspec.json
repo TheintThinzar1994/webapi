@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\api\\WebApi\\WebApi\\WebApi.csproj": {}
+    "D:\\webapi\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "D:\\api\\WebApi\\WebApi\\WebApi.csproj": {
+    "D:\\webapi\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\api\\WebApi\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "D:\\webapi\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "D:\\api\\WebApi\\WebApi\\WebApi.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\api\\WebApi\\WebApi\\obj\\",
+        "projectPath": "D:\\webapi\\WebApi\\WebApi.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\webapi\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

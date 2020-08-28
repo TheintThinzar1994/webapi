@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace WebApi.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
     {
@@ -111,17 +111,18 @@ namespace WebApi.Controllers
         //    return CreatedAtAction("GetUser", new { id = user.Id }, user);
 
         //}
-        [HttpPost("/CheckUser")]
-        public string CheckUser(string user_name)
+        [HttpPost]
+        [Route("CheckUser")]
+        public string CheckUser(string user_name,string password)
         {
             // var user = await _context.Users.FindAsync(id);
 
-            var  user =  _context.Users.Where(e => e.User_Name == user_name && e.Password == "1234");
+            var  user =  _context.Users.Where(e => e.User_Name == user_name && e.Password == password);
            
             IDictionary<string, string> result = new Dictionary<string, string>();
 
 
-            if (user != null)
+            if (user.Count()>0)
             {
                 result["status"] = "200";
                 result["message"] = "Success";
