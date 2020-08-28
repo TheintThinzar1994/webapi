@@ -12,6 +12,9 @@ namespace WebApi.Models
             : base(options)
         {
         }
-        public DbSet<TodoCustomer> Customers { get; set; }
+
+        public DbSet<User> Users{ get; set; }
+
+
     }
 }

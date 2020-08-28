@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using TodoApi.Models;
 using Microsoft.AspNetCore.Hosting;
 using WebApi.Models;
+using Microsoft.AspNetCore.Routing;
 
 
 //register the database context ( data context to Dependency Injection container)
@@ -28,7 +29,7 @@ namespace WebApi
 
             services.AddDbContext<ApplicationContext>(opt =>
             {
-                opt.UseNpgsql(Configuration.GetConnectionString("ApplicationContext"));
+                opt.UseNpgsql("Host=127.0.0.1;Port=5432;User Id=postgres;Password=test123;Database=ThankCard");
             });
             //opt.UseInMemoryDatabase("TodoList"));
             //services.AddControllers();
@@ -51,7 +52,15 @@ namespace WebApi
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                 
             });
+
+            
         }
+        //private void ConfigureRoute(IRouteBuilder routeBuilder)
+        //{
+        //    //Home/Index 
+        //    routeBuilder.MapRoute("CheckUser", "{controller = Users}/{action = CheckUser}/{user_name?}");
+        //}
     }
 }
